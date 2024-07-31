@@ -1,0 +1,353 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOmQ8dt8IsDIjBmuUNGK9um",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ivydabiero/dsc-phase-1-project/blob/master/Practice%20on%20for%20loop%20and%20numpy\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "F8W8HYm88Wvq",
+        "outputId": "dd237267-bc70-4e43-900c-ceb54100e6f6"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Good night\n"
+          ]
+        }
+      ],
+      "source": [
+        "time = 24\n",
+        "if time < 10:\n",
+        "  print('Good morning');\n",
+        "elif 10 < time <16:\n",
+        "   print(\"Good afternoon\");\n",
+        "elif 16 < time <20:\n",
+        "      print(\"Good evening\");\n",
+        "else:\n",
+        "        print(\"Good night\");\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "zero_to_three = [0,1,2,3,4]\n",
+        "zero_to_three"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2krz5x6N--oW",
+        "outputId": "4e87e7bd-1b2a-47a4-e1e4-49f177b55122"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 1, 2, 3, 4]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(zero_to_three)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dtmUo391_MPn",
+        "outputId": "942a8547-ee80-43d2-aac5-bf37097b555f"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for numbers in zero_to_three:\n",
+        "    print(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VbpKCokW_ZNY",
+        "outputId": "71b5c71c-e4fb-404d-d7ba-eb2d6e893207"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "iteration = 0\n",
+        "for whatever_we_want in zero_to_three:\n",
+        "  iteration +=1\n",
+        "  print(\"This is an iteration\", iteration)\n",
+        "  print(\"whatever_we_want\")\n",
+        "  print(\"The for loop is finished now\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KsD5Ck9w__iX",
+        "outputId": "26eafb7e-ea4b-4b3d-8d75-0fedcc5e5cd7"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "This is an iteration 1\n",
+            "whatever_we_want\n",
+            "The for loop is finished now\n",
+            "This is an iteration 2\n",
+            "whatever_we_want\n",
+            "The for loop is finished now\n",
+            "This is an iteration 3\n",
+            "whatever_we_want\n",
+            "The for loop is finished now\n",
+            "This is an iteration 4\n",
+            "whatever_we_want\n",
+            "The for loop is finished now\n",
+            "This is an iteration 5\n",
+            "whatever_we_want\n",
+            "The for loop is finished now\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "countries = ['Kenya', 'Tanzania', 'Uganda', 'Rwanda', 'Bostwana', 'Somalia', 'Ethopia']"
+      ],
+      "metadata": {
+        "id": "D520o4T7Beeg"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "counties = ['Nairobi', 'Dar es Salaam', 'Kampala', 'Kigali', 'Gaborone', 'Mogadishu', 'Addis Ababa']\n"
+      ],
+      "metadata": {
+        "id": "eWGOsseHB7pS"
+      },
+      "execution_count": 12,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(countries)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p80TW1uPCFxY",
+        "outputId": "2d169a03-4550-46b9-bb36-8e8797b95d34"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "7"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "range(len(countries))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1u5FUNP6Cnx-",
+        "outputId": "674aceb1-f46f-4a89-b9f8-e66b351dc93b"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "range(0, 7)"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for index in range(len(countries)):\n",
+        "    print( countries[index] + \",\" , counties[index])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XzJowIWMCwYo",
+        "outputId": "94fe7b3e-61fb-4cd1-a25c-550930e3a049"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Kenya, Nairobi\n",
+            "Tanzania, Dar es Salaam\n",
+            "Uganda, Kampala\n",
+            "Rwanda, Kigali\n",
+            "Bostwana, Gaborone\n",
+            "Somalia, Mogadishu\n",
+            "Ethopia, Addis Ababa\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for index in range(len(countries)):\n",
+        "    print(countries[index])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KoubE8B-HZ5x",
+        "outputId": "2503477b-b874-468a-c5b8-5d859d709326"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Kenya\n",
+            "Tanzania\n",
+            "Uganda\n",
+            "Rwanda\n",
+            "Bostwana\n",
+            "Somalia\n",
+            "Ethopia\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "random_numbers = np.random.randint(0,20)\n",
+        "random_numbers -=1\n",
+        "print(random_numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R1wqkujcIDj5",
+        "outputId": "614d0808-cc41-4932-8559-0cbdd3d3be47"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Ay9yu6VQJ8mw"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
